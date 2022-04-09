@@ -12,7 +12,7 @@ const Home = () => {
   }
   return (
     <View>
-      <Text onPress={clearOnboarding}>tytgyt</Text>
+      <Text onPress={clearOnboarding}>refresh</Text>
       <Text>Home</Text>
 
     </View>
