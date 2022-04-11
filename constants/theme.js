@@ -1,7 +1,7 @@
 export const COLORS = {
     primary: "#F54B72",
     secondary: "#F9E4E8",
-
+    background: "#FCFCFC",
     white: "#FFFFFF",
     dark: "#172B4D",
     lightDark: "#9BA3B2",
@@ -15,6 +15,7 @@ export const SIZES = {
     medium: 16,
     large: 18,
     extraLarge: 24,
+    extremeLarge: 32,
 };
 export const FONTS = {
     black: "Roboto_900Black",

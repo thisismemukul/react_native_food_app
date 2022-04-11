@@ -1,6 +1,6 @@
-import { TouchableOpacity, Animated, View, StyleSheet } from 'react-native'
+import { TouchableOpacity, Animated, Text, View, StyleSheet } from 'react-native'
 import React, { useEffect, useRef } from 'react'
-import { COLORS, SHADOWS, SIZES, FONTS } from '../constants'
+import { COLORS, SHADOWS, SIZES, FONTS,assets } from '../constants'
 import Svg, {
     G,
     Circle,
@@ -70,7 +70,75 @@ export const NextButton = ({ percentage, scrollTo }) => {
             </TouchableOpacity>
         </View>
     );
-}
+};
+
+export const CircleButton = ({ imgUrl }) => {
+    return (
+        <TouchableOpacity style={{
+            width: 40,
+            height: 40,
+            backgroundColor: COLORS.white,
+            position: 'absolute',
+            borderRadius: SIZES.extraLarge,
+            alignItems: 'center',
+            justifyContent: 'center',
+            ...SHADOWS.light,
+        }}
+        // onPress={handlePress}
+        >
+            <Image
+                source={imgUrl}
+                resizeMode="contain"
+                style={{ width: 24, height: 24 }}
+            />
+
+        </TouchableOpacity>
+    )
+};
+
+export const RectButton = ({ item, minWidth, }) => {
+    return (
+        <TouchableOpacity
+            style={{
+                backgroundColor: COLORS.primary,
+                padding: SIZES.small,
+                borderRadius: SIZES.extraLarge,
+                marginStart: SIZES.base,
+                minWidth: minWidth,
+            }}
+        // onPress={handlePress}
+        >
+            <Text
+                style={{
+                    fontFamily: FONTS.semiBold,
+                    // fontSize: fontSize,
+                    color: COLORS.white,
+                    textAlign: "center",
+                }}
+            >
+                <Ionicons name={item.icon} size={16} color={COLORS.white} />
+                {item.title}
+            </Text>
+        </TouchableOpacity>
+    );
+};
+export const LikeButton = () => {
+    return (
+        <TouchableOpacity
+            style={{
+                width: 40,
+                height: 40,
+                position: 'absolute',
+                borderRadius: SIZES.extraLarge,
+                alignItems: 'center',
+                justifyContent: 'center',
+                backgroundColor: COLORS.secondary,
+            }}
+        >
+            <Ionicons name={assets.heartIcon} size={SIZES.extraLarge} color={COLORS.primary} />
+        </TouchableOpacity>
+    );
+};
 
 const styles = StyleSheet.create({
     container: {

@@ -1,8 +1,9 @@
 import React, { useState, useRef } from 'react'
 import { StyleSheet, View, Text, FlatList, Animated } from 'react-native'
-import { slides } from '../constants';
+import { slides } from '../../constants';
+// import {OnboardingItem,NextButton,Paginator} from '../index';
 import OnboardingItem from './OnboardingItem';
-import { NextButton } from '../components/Buttons';
+import NextButton from '../Buttons';
 import Paginator from './Paginator';
 import AsyncStorage from '@react-native-async-storage/async-storage';
 
