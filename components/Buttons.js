@@ -1,6 +1,6 @@
 import { TouchableOpacity, Animated, Text, View, StyleSheet } from 'react-native'
 import React, { useEffect, useRef } from 'react'
-import { COLORS, SHADOWS, SIZES, FONTS,assets } from '../constants'
+import { COLORS, SHADOWS, SIZES, FONTS, assets } from '../constants'
 import Svg, {
     G,
     Circle,
@@ -96,11 +96,11 @@ export const CircleButton = ({ imgUrl }) => {
     )
 };
 
-export const RectButton = ({ item, minWidth, }) => {
+export const RectButton = ({ item, minWidth, bgColor, iconColor, textColor, text }) => {
     return (
         <TouchableOpacity
             style={{
-                backgroundColor: COLORS.primary,
+                backgroundColor: bgColor,
                 padding: SIZES.small,
                 borderRadius: SIZES.extraLarge,
                 marginStart: SIZES.base,
@@ -112,12 +112,17 @@ export const RectButton = ({ item, minWidth, }) => {
                 style={{
                     fontFamily: FONTS.semiBold,
                     // fontSize: fontSize,
-                    color: COLORS.white,
+                    color: textColor,
                     textAlign: "center",
                 }}
             >
-                <Ionicons name={item.icon} size={16} color={COLORS.white} />
-                {item.title}
+                <Ionicons name={item.icon} size={16} color={iconColor} />
+                {text ? (
+                    text
+                ) : (
+                    item.rate ? item.rate : item.title
+                )}
+
             </Text>
         </TouchableOpacity>
     );

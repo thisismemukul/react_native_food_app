@@ -9,6 +9,7 @@ const zomatoData = [{
         distance: 4,
         description: "The action painter abstract expressionists were directly influenced by automatism. Pollock channelled this into producing gestural. The action painter abstract expressionists were directly influenced by automatism. Pollock channelled this into producing gestural. The action painter abstract expressionists were directly influenced by automatism. Pollock channelled this into producing gestural.",
         image: assets.food01,
+        icon: assets.starIcon,
     },
     {
         id: "FOOD-02",
@@ -19,6 +20,7 @@ const zomatoData = [{
         distance: 4,
         description: "The action painter abstract expressionists were directly influenced by automatism. Pollock channelled this into producing gestural. The action painter abstract expressionists were directly influenced by automatism. Pollock channelled this into producing gestural. The action painter abstract expressionists were directly influenced by automatism. Pollock channelled this into producing gestural.",
         image: assets.food02,
+        icon: assets.starIcon,
     },
     {
         id: "FOOD-03",
@@ -29,6 +31,7 @@ const zomatoData = [{
         distance: 4,
         description: "The action painter abstract expressionists were directly influenced by automatism. Pollock channelled this into producing gestural. The action painter abstract expressionists were directly influenced by automatism. Pollock channelled this into producing gestural. The action painter abstract expressionists were directly influenced by automatism. Pollock channelled this into producing gestural.",
         image: assets.food01,
+        icon: assets.starIcon,
     },
     {
         id: "FOOD-04",
@@ -39,6 +42,7 @@ const zomatoData = [{
         distance: 4,
         description: "The action painter abstract expressionists were directly influenced by automatism. Pollock channelled this into producing gestural. The action painter abstract expressionists were directly influenced by automatism. Pollock channelled this into producing gestural. The action painter abstract expressionists were directly influenced by automatism. Pollock channelled this into producing gestural.",
         image: assets.food02,
+        icon: assets.starIcon,
     },
 ];
 const popularBrands = [{

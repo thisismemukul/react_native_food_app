@@ -8,6 +8,10 @@ import PopularCard from "./homeComps/PopularCard";
 import MostPopularCard from "./homeComps/MostPopularCard";
 import Restaurants from "./homeComps/Restaurants";
 
+import DetailsHeader from "./detailsComps/DetailsHeader";
+import DetailsRender from "./detailsComps/DetailsRender";
+import IncDec from "./IncDec";
+
 import { NextButton, CircleButton, RectButton, LikeButton } from "./Buttons";
 
 export {
@@ -19,6 +23,11 @@ export {
     HomeHeader,
     HomeRender,
     Restaurants,
+
+    DetailsHeader,
+    DetailsRender,
+
+    IncDec,
 
     PopularCard,
     MostPopularCard,

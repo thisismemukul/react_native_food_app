@@ -77,7 +77,7 @@ const HomeHeader = () => {
             <View>
                 <FlatList
                     data={categoryItems}
-                    renderItem={({ item }) => <RectButton item={item} minWidth={150} />}
+                    renderItem={({ item }) => <RectButton item={item} minWidth={150} bgColor={COLORS.primary} iconColor={COLORS.white} textColor={COLORS.white} />}
                     horizontal
                     showsHorizontalScrollIndicator={false}
                     bounces={true}

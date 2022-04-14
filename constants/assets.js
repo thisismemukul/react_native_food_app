@@ -5,6 +5,11 @@ import popbrnd02 from "../assets/images/popular_brands/mcdonalds.svg";
 import popbrnd03 from "../assets/images/popular_brands/dominospizza.svg";
 import popbrnd04 from "../assets/images/popular_brands/kfc.svg";
 
+// const popbrnd01 = "../../assets/images/popular_brands/burgerking.svg";
+// const popbrnd02 = "../assets/images/popular_brands/mcdonalds.svg";
+// const popbrnd03 = "../assets/images/popular_brands/dominospizza.svg";
+// const popbrnd04 = "../assets/images/popular_brands/kfc.svg";
+
 import food01 from "../assets/images/food01.png";
 import food02 from "../assets/images/food02.png";
 
@@ -19,24 +24,30 @@ import restaurant03 from "../assets/images/restaurants/restaurant03.png";
 import restaurant04 from "../assets/images/restaurants/restaurant04.png";
 import restaurant05 from "../assets/images/restaurants/restaurant05.png";
 
+import detailsHeaderImg from "../assets/images/details/detailsHeader.png";
+
 
 const menuIcon = "menu-sharp";
+const backIcon = "arrow-back-sharp";
 const fastFoodIcon = "fast-food-sharp";
 const leafIcon = "leaf-sharp";
 const beerIcon = "beer-sharp";
 const heartIcon = "heart-sharp";
 const starIcon = "star-sharp";
 const restaurantIcon = "restaurant-sharp";
+const cheeseIcon = "cheese";
 
 export default {
     slide01,
 
     menuIcon,
+    backIcon,
     fastFoodIcon,
     leafIcon,
     beerIcon,
     heartIcon,
     starIcon,
+    cheeseIcon,
 
     curUser,
 
@@ -60,4 +71,5 @@ export default {
     restaurant04,
     restaurant05,
 
+    detailsHeaderImg,
 };

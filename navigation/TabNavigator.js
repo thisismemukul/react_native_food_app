@@ -1,8 +1,10 @@
 import { View, Text, TouchableOpacity } from 'react-native';
 import React from 'react';
-import { createBottomTabNavigator, BottomTabBar } from '@react-navigation/bottom-tabs';
+import { createBottomTabNavigator } from '@react-navigation/bottom-tabs';
+import { createStackNavigator } from "@react-navigation/stack";
+import { getFocusedRouteNameFromRoute } from '@react-navigation/native';
 import Ionicons from 'react-native-vector-icons/Ionicons';
-import { Home, Profile, Search, Cart } from '../screens';
+import { Home, Details, Profile, Search, Cart } from '../screens';
 const homeName = 'Home';
 const searchName = 'Search';
 const cartName = 'Cart';
@@ -11,7 +13,15 @@ const profileName = 'Profile';
 import { COLORS } from "../constants";
 
 const Tab = createBottomTabNavigator();
-
+const Stack = createStackNavigator();
+const HomeStack = () => {
+    return (
+        <Stack.Navigator screenOptions={{ headerShown: false }}>
+            <Stack.Screen name="Home2" component={Home} />
+            <Stack.Screen name="Details" component={Details} />
+        </Stack.Navigator>
+    )
+}
 // const TabNavigator = () => {
 //     return (
 //         <Tab.Navigator>
@@ -59,12 +69,26 @@ const TabNavigator = () => {
                 tabBarLabelStyle: { paddingBottom: 10, fontSize: 10 },
             })}
         >
-            <Tab.Screen name="Home" component={Home} />
+            <Tab.Screen name="Home" component={HomeStack} options={({ route }) => ({
+                tabBarStyle: {
+                    display: getTabBarVisibility(route),
+                },
+            })} />
             <Tab.Screen name="Search" component={Search} />
             <Tab.Screen name="Cart" component={Cart} />
             <Tab.Screen name="Profile" component={Profile} />
         </Tab.Navigator>
     )
-}
+};
+const getTabBarVisibility = route => {
+    // console.log(route);
+    const routeName = getFocusedRouteNameFromRoute(route) ?? 'Feed';
+    // console.log(routeName);
+
+    if (routeName == 'Details') {
+        return 'none';
+    }
+    return 'flex';
+};
 
 export default TabNavigator;
