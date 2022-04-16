@@ -3,14 +3,21 @@ import React, { useState } from 'react'
 import { COLORS, FONTS, SIZES, allRestaurants, popularBrands, zomatoData, popularDishes } from "../../constants";
 import { RectButton } from '../Buttons';
 // import IncDec from '../IncDec';
-
+import { useNavigation } from '@react-navigation/native'
+import { addtoCart } from '../../helper/Carthelper';
 import MaterialCommunityIcons from 'react-native-vector-icons/MaterialCommunityIcons';
 
 const numColumns = 2;
 const numColumnsRestaurants = 2;
 const DetailsRender = ({ item }) => {
+    const navigation = useNavigation();
+
     const [text, setText] = useState(item.description.slice(0, 100));
     const [readMore, setReadMore] = useState(false);
+    const [cart, setCart] = useState('');
+    const handlePress = () => {
+        addtoCart(item);
+    };
     return (
         <View style={{ zIndex: 0, padding: SIZES.extraLarge, }}>
             <View style={{ padding: SIZES.small, }}>
@@ -117,7 +124,7 @@ const DetailsRender = ({ item }) => {
                             ₹ {item.price}
                         </Text>
                     </View>
-                    <RectButton item={item} minWidth={328} bgColor={COLORS.primary} textColor={COLORS.white} text="Add To Cart" />
+                    {cart ? <RectButton handlePress={() => navigation.navigate("Cart", { items: item })} cart={cart} item={item} minWidth={328} bgColor={COLORS.secondary} textColor={COLORS.dark} text="View Cart" /> : <RectButton handlePress={handlePress} cart={cart} item={item} minWidth={328} bgColor={COLORS.primary} textColor={COLORS.white} text="Add To Cart" />}
                 </View>
             </View>
         </View>

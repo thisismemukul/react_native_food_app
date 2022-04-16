@@ -38,6 +38,7 @@ const HomeHeader = () => {
                 <View style={{ padding: SIZES.small }}>
                     <Text
                         style={{
+                            color: COLORS.dark,
                             fontFamily: FONTS.regular,
                             fontSize: SIZES.extremeLarge,
                         }}
@@ -53,6 +54,7 @@ const HomeHeader = () => {
                     >
                         <Text
                             style={{
+                                color: COLORS.dark,
                                 fontFamily: FONTS.regular,
                                 fontSize: SIZES.extraLarge,
                                 paddingEnd: SIZES.base,
@@ -62,6 +64,7 @@ const HomeHeader = () => {
                         </Text>
                         <Text
                             style={{
+                                color: COLORS.dark,
                                 fontFamily: FONTS.bold,
                                 fontSize: SIZES.extraLarge,
                             }}

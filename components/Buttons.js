@@ -96,7 +96,7 @@ export const CircleButton = ({ imgUrl }) => {
     )
 };
 
-export const RectButton = ({ item, minWidth, bgColor, iconColor, textColor, text }) => {
+export const RectButton = ({ item, minWidth, bgColor, iconColor, textColor, text,handlePress }) => {
     return (
         <TouchableOpacity
             style={{
@@ -106,7 +106,7 @@ export const RectButton = ({ item, minWidth, bgColor, iconColor, textColor, text
                 marginStart: SIZES.base,
                 minWidth: minWidth,
             }}
-        // onPress={handlePress}
+        onPress={handlePress}
         >
             <Text
                 style={{

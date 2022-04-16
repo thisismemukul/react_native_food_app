@@ -1,11 +1,11 @@
-import {  Text, View, ActivityIndicator } from "react-native";
+import { Text, View, ActivityIndicator } from "react-native";
 import { NavigationContainer } from '@react-navigation/native';
 import { createStackNavigator } from "@react-navigation/stack";
 
 import React, { useState, useEffect } from 'react';
 
 import AsyncStorage from '@react-native-async-storage/async-storage';
-import { Onboarding } from './components';
+import { Onboarding } from "./components";
 import TabNavigator from './navigation/TabNavigator';
 import { COLORS } from './constants';
 
@@ -50,15 +50,6 @@ const App = () => {
     checkOnboarding();
   }, [viewedOnboarding]);
 
-  // return (
-  //   <View style={styles.container}>
-  //     {loading ? <Loading /> : viewedOnboarding ? <Home /> : <Onboarding />}
-  //     {/* <Onboarding/> */}
-
-  //     <StatusBar style="auto" />
-  //   </View>
-  // );
-
   const [fontsLoaded] = useFonts({
     Roboto_900Black,
     Roboto_700Bold,
@@ -80,7 +71,8 @@ const App = () => {
       <NavigationContainer>
         {/* <Onboarding /> */}
         <Stack.Navigator screenOptions={{ headerShown: false }} initialRouteName="Home">
-          {loading ? <Stack.Screen name="Loading" component={Loading} /> : viewedOnboarding ? <Stack.Screen name="TabNavigator" component={TabNavigator} /> : <Stack.Screen name="Onboarding" component={Onboarding} />}
+          <Stack.Screen name="TabNavigator" component={TabNavigator} />
+          {/* {loading ? <Stack.Screen name="Loading" component={Loading} /> : viewedOnboarding ? <Stack.Screen name="TabNavigator" component={TabNavigator} /> : <Stack.Screen name="Onboarding" component={Onboarding} />} */}
         </Stack.Navigator>
       </NavigationContainer>
     )

@@ -14,7 +14,7 @@ const PopularCard = ({ item }) => {
                     /> : <Image source={item.image} style={{ width: 155, height: 135 }} />}
                 </View>
                 <View style={{ padding: 10, width: 155, alignItems: "center" }}>
-                    <Text>{item.title}</Text>
+                    <Text style={{ color: COLORS.dark, }}>{item.title}</Text>
                     <Text style={{ color: "#777", paddingTop: 5 }}>
                         {item.description}
                     </Text>

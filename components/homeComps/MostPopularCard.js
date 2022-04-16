@@ -28,11 +28,11 @@ const MostPopularCard = ({ item }) => {
                         /> : <Image source={item.image} style={{ width: 155, height: 135 }} />}
                     </View>
                     <View style={{ padding: 10, justifyContent: "center", alignItems: "center" }}>
-                        <Text style={{ fontFamily: FONTS.regular, }}>{item.title}</Text>
+                        <Text style={{ color: COLORS.dark,fontFamily: FONTS.regular, }}>{item.title}</Text>
                         <Text style={{ color: "#777", paddingTop: 5 }}>
                             <Ionicons name={assets.starIcon} size={SIZES.small} color={COLORS.primary} /> {item.rate} | {item.distance} km
                         </Text>
-                        <Text>₹ {item.price}</Text>
+                        <Text style={{color: COLORS.dark,}}>₹ {item.price}</Text>
                     </View>
                 </View>
             </TouchableOpacity>

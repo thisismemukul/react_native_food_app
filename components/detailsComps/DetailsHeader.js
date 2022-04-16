@@ -28,6 +28,7 @@ const DetailsHeader = () => {
                     <View style={{ padding: SIZES.small }}>
                         <Text
                             style={{
+                                color:COLORS.dark,
                                 fontFamily: FONTS.medium,
                                 fontSize: SIZES.large,
                             }}

@@ -20,11 +20,11 @@ const Restaurants = ({ item }) => {
                     <Image source={item.image} style={{ width: 155, height: 135 }} />
                 </View>
                 <View style={{ flex: 1, margin: SIZES.base, padding: 10, width: 155, alignItems: "flex-start", }}>
-                    <Text style={{ fontFamily: FONTS.medium, }}>{item.title}</Text>
+                    <Text style={{color: COLORS.dark, fontFamily: FONTS.medium, }}>{item.title}</Text>
                     <Text style={{ color: "#777", paddingTop: 5 }}>
                         <Ionicons name={assets.starIcon} size={SIZES.small} color={COLORS.primary} /> {item.rate} | {item.distance} km
                     </Text>
-                    <Text>{item.restaurant}</Text>
+                    <Text style={{color: COLORS.dark,}}>{item.restaurant}</Text>
                 </View>
                 <View style={{ width: 45, height: 45, alignSelf: "flex-start", marginEnd: SIZES.font, }}>
                     <LikeButton />
