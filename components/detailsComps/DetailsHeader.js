@@ -4,7 +4,7 @@ import { useNavigation } from '@react-navigation/native'
 import { COLORS, FONTS, SIZES, assets, categoryItems, slides } from "../../constants";
 import { RectButton } from '../Buttons';
 import Ionicons from 'react-native-vector-icons/Ionicons';
-const DetailsHeader = () => {
+const DetailsHeader = ({title}) => {
     const navigation = useNavigation();
 
     return (
@@ -33,7 +33,7 @@ const DetailsHeader = () => {
                                 fontSize: SIZES.large,
                             }}
                         >
-                            Details
+                            {title}
                         </Text>
                     </View>
                 </View>

@@ -5,7 +5,7 @@ import Ionicons from 'react-native-vector-icons/Ionicons';
 import { LikeButton } from '../Buttons';
 import { useNavigation } from '@react-navigation/native'
 
-const Restaurants = ({ item }) => {
+const SearchRender = ({ item }) => {
     const navigation = useNavigation();
 
     return (
@@ -45,4 +45,4 @@ const Restaurants = ({ item }) => {
     )
 }
 
-export default Restaurants
+export default SearchRender

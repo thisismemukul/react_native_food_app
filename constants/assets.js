@@ -1,5 +1,9 @@
 import slide01 from "../assets/images/slide01.png";
+import signupImage from "../assets/images/auth/signup.png";
+import loginImage from "../assets/images/auth/login.png";
+
 import curUser from "../assets/images/curUser.png";
+
 import popbrnd01 from "../assets/images/popular_brands/burgerking.svg";
 import popbrnd02 from "../assets/images/popular_brands/mcdonalds.svg";
 import popbrnd03 from "../assets/images/popular_brands/dominospizza.svg";
@@ -36,6 +40,7 @@ const heartIcon = "heart-sharp";
 const starIcon = "star-sharp";
 const restaurantIcon = "restaurant-sharp";
 const cheeseIcon = "cheese";
+const trendingIcon = "trending-up-sharp";
 
 export default {
     slide01,
@@ -48,6 +53,10 @@ export default {
     heartIcon,
     starIcon,
     cheeseIcon,
+    trendingIcon,
+
+    signupImage,
+    loginImage,
 
     curUser,
 

@@ -9,7 +9,7 @@ import {
   ProfileRender,
   LikeButton
 } from '../components';
-const Profile = ({ navigation, route }) => {
+const Login = ({ navigation, route }) => {
   // const { names } = route.params.names;
   return (
     <SafeAreaView style={{ flex: 1 }}>
@@ -57,4 +57,4 @@ const Profile = ({ navigation, route }) => {
   )
 }
 
-export default Profile;
+export default Login;

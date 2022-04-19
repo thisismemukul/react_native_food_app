@@ -10,8 +10,14 @@ import Restaurants from "./homeComps/Restaurants";
 
 import DetailsHeader from "./detailsComps/DetailsHeader";
 import DetailsRender from "./detailsComps/DetailsRender";
+
+import CartRender from "./cartComps/CartRender";
 import IncDec from "./IncDec";
 
+import SearchHeader from "./searchComps/SearchHeader";
+import SearchRender from "./searchComps/SearchRender";
+
+import ProfileRender from "./profileComps/ProfileRender";
 import { NextButton, CircleButton, RectButton, LikeButton } from "./Buttons";
 
 export {
@@ -27,7 +33,14 @@ export {
     DetailsHeader,
     DetailsRender,
 
+    CartRender,
+
     IncDec,
+
+    SearchHeader,
+    SearchRender,
+
+    ProfileRender,
 
     PopularCard,
     MostPopularCard,

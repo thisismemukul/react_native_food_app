@@ -1,22 +1,30 @@
 import { View, Text, Image, TouchableOpacity, FlatList } from 'react-native'
-import React, { useState } from 'react'
+import React, { useState, useEffect } from 'react'
 import { COLORS, FONTS, SIZES, allRestaurants, popularBrands, zomatoData, popularDishes } from "../../constants";
 import { RectButton } from '../Buttons';
 // import IncDec from '../IncDec';
 import { useNavigation } from '@react-navigation/native'
-import { addtoCart } from '../../helper/Carthelper';
+import { addtoCart, showCart } from '../../helper/Carthelper';
 import MaterialCommunityIcons from 'react-native-vector-icons/MaterialCommunityIcons';
-
-const numColumns = 2;
-const numColumnsRestaurants = 2;
 const DetailsRender = ({ item }) => {
     const navigation = useNavigation();
-
     const [text, setText] = useState(item.description.slice(0, 100));
     const [readMore, setReadMore] = useState(false);
+    const [addtoCartButton, setAddtoCartButton] = useState(false);
+    // console.log("addtoCartButton", addtoCartButton);
     const [cart, setCart] = useState('');
     const handlePress = () => {
         addtoCart(item);
+        setCart(item);
+    };
+    const handlePressViewCart = () => {
+        showCart().then(res => {
+            // setProducts(res)
+            // console.log("res-----------------------------------------------------------------");
+            // console.log("res", res);
+            // console.log("res-----------------------------------------------------------------");
+            navigation.navigate("Cart", { item: res })
+        });
     };
     return (
         <View style={{ zIndex: 0, padding: SIZES.extraLarge, }}>
@@ -124,11 +132,11 @@ const DetailsRender = ({ item }) => {
                             ₹ {item.price}
                         </Text>
                     </View>
-                    {cart ? <RectButton handlePress={() => navigation.navigate("Cart", { items: item })} cart={cart} item={item} minWidth={328} bgColor={COLORS.secondary} textColor={COLORS.dark} text="View Cart" /> : <RectButton handlePress={handlePress} cart={cart} item={item} minWidth={328} bgColor={COLORS.primary} textColor={COLORS.white} text="Add To Cart" />}
+                    {cart ? <RectButton handlePress={handlePressViewCart} item={item} minWidth={328} bgColor={COLORS.secondary} textColor={COLORS.dark} text="View Cart" /> : <RectButton handlePress={handlePress} item={item} minWidth={328} bgColor={COLORS.primary} textColor={COLORS.white} text="Add To Cart" />}
                 </View>
             </View>
         </View>
     )
 }
 
-export default DetailsRender
+export default DetailsRender;

@@ -77,24 +77,44 @@ const popularBrands = [{
 const popularDishes = [{
         id: "01",
         title: "Rotini Pasta",
+        description: "Get 60% Off on your first order",
+        restaurant: "Rise Cafe",
+        price: 139,
+        rate: 4.8,
+        distance: 4,
         imgType: "PNG",
         image: assets.popdish01,
     },
     {
         id: "02",
         title: "Pizza",
+        description: "Get 60% Off on your first order",
+        restaurant: "Rise Cafe",
+        price: 139,
+        rate: 4.8,
+        distance: 4,
         imgType: "PNG",
         image: assets.popdish02,
     },
     {
         id: "03",
         title: "Pani Puri",
+        description: "Get 60% Off on your first order",
+        restaurant: "Rise Cafe",
+        price: 159,
+        rate: 4.8,
+        distance: 4,
         imgType: "PNG",
         image: assets.popdish03,
     },
     {
         id: "04",
         title: "Thali",
+        description: "Get 60% Off on your first order",
+        restaurant: "Rise Cafe",
+        price: 139,
+        rate: 4.8,
+        distance: 4,
         imgType: "PNG",
         image: assets.popdish04,
     },
@@ -124,11 +144,13 @@ const allRestaurants = [{
         rate: 3.8,
         distance: 4,
         restaurant: "Indian, Chinese",
+        description: "The action painter abstract expressionists were directly influenced by automatism. Pollock channelled this into producing gestural. The action painter abstract expressionists were directly influenced by automatism. Pollock channelled this into producing gestural. The action painter abstract expressionists were directly influenced by automatism. Pollock channelled this into producing gestural.",
         image: assets.restaurant01,
     },
     {
         id: "02",
         title: "House of Pan Cakes",
+        description: "The action painter abstract expressionists were directly influenced by automatism. Pollock channelled this into producing gestural. The action painter abstract expressionists were directly influenced by automatism. Pollock channelled this into producing gestural. The action painter abstract expressionists were directly influenced by automatism. Pollock channelled this into producing gestural.",
         rate: 4.8,
         distance: 2,
         restaurant: "Indian",
@@ -137,6 +159,7 @@ const allRestaurants = [{
     {
         id: "03",
         title: "Vrindavan Cafe & Restro",
+        description: "The action painter abstract expressionists were directly influenced by automatism. Pollock channelled this into producing gestural. The action painter abstract expressionists were directly influenced by automatism. Pollock channelled this into producing gestural. The action painter abstract expressionists were directly influenced by automatism. Pollock channelled this into producing gestural.",
         rate: 4.3,
         distance: 4.6,
         restaurant: "Indian, Italian",
@@ -145,6 +168,7 @@ const allRestaurants = [{
     {
         id: "04",
         title: "Tinku Breakfast Stall",
+        description: "The action painter abstract expressionists were directly influenced by automatism. Pollock channelled this into producing gestural. The action painter abstract expressionists were directly influenced by automatism. Pollock channelled this into producing gestural. The action painter abstract expressionists were directly influenced by automatism. Pollock channelled this into producing gestural.",
         rate: 3.5,
         distance: 3.4,
         restaurant: "Indian",
@@ -153,6 +177,7 @@ const allRestaurants = [{
     {
         id: "05",
         title: "The Fast Food Company",
+        description: "The action painter abstract expressionists were directly influenced by automatism. Pollock channelled this into producing gestural. The action painter abstract expressionists were directly influenced by automatism. Pollock channelled this into producing gestural. The action painter abstract expressionists were directly influenced by automatism. Pollock channelled this into producing gestural.",
         rate: 4.9,
         distance: 1,
         restaurant: "Indian",
@@ -160,4 +185,41 @@ const allRestaurants = [{
     },
 ];
 
-export { zomatoData, popularBrands, popularDishes, homeRender, allRestaurants };
+const trendingSearches = [{
+        id: "1",
+        title: "Pure Veg",
+        icon: assets.trendingIcon,
+    },
+    {
+        id: "2",
+        title: "Burgers",
+        icon: assets.trendingIcon,
+    },
+    {
+        id: "3",
+        title: "Pizza",
+        icon: assets.trendingIcon,
+    },
+    {
+        id: "4",
+        title: "Sweets",
+        icon: assets.trendingIcon,
+    },
+    {
+        id: "5",
+        title: "KFC",
+        icon: assets.trendingIcon,
+    },
+    {
+        id: "6",
+        title: "McDonald's",
+        icon: assets.trendingIcon,
+    },
+    {
+        id: "7",
+        title: "Domino's Pizza",
+        icon: assets.trendingIcon,
+    },
+];
+
+export { zomatoData, popularBrands, popularDishes, homeRender, trendingSearches, allRestaurants };

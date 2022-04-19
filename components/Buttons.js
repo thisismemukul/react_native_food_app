@@ -96,17 +96,19 @@ export const CircleButton = ({ imgUrl }) => {
     )
 };
 
-export const RectButton = ({ item, minWidth, bgColor, iconColor, textColor, text,handlePress }) => {
+export const RectButton = ({ item, minWidth, bgColor,item_icon, borderColor, iconColor, textColor, text, handlePress }) => {
     return (
         <TouchableOpacity
             style={{
                 backgroundColor: bgColor,
+                borderColor: borderColor,
+                borderStyle: "dotted",
                 padding: SIZES.small,
                 borderRadius: SIZES.extraLarge,
                 marginStart: SIZES.base,
                 minWidth: minWidth,
             }}
-        onPress={handlePress}
+            onPress={handlePress}
         >
             <Text
                 style={{
@@ -116,7 +118,8 @@ export const RectButton = ({ item, minWidth, bgColor, iconColor, textColor, text
                     textAlign: "center",
                 }}
             >
-                <Ionicons name={item.icon} size={16} color={iconColor} />
+                {item_icon ? <Ionicons name={item_icon} size={16} color={iconColor} /> : <Ionicons name={item.icon} size={16} color={iconColor} />}
+                
                 {text ? (
                     text
                 ) : (

@@ -1,4 +1,4 @@
-import { View, SafeAreaView, Text, ScrollView, FlatList, Image } from 'react-native'
+import { Platform, StyleSheet, View, SafeAreaView, Text, ScrollView, FlatList, Image } from 'react-native'
 import React from 'react'
 import { RectButton } from '../components';
 
@@ -27,13 +27,27 @@ const Details = ({ navigation, route }) => {
                     showsVerticalScrollIndicator={false}
                     ListHeaderComponent={<DetailsHeader />}
                 /> */}
-                <DetailsHeader />
+                <DetailsHeader title="Details" />
                 <View style={{ width: 45, height: 45, alignSelf: "flex-end", marginEnd: SIZES.font }}>
                     <LikeButton />
                 </View>
-                <ScrollView>
+                {/* <ScrollView contentContainerStyle={styles.container}>
                     <DetailsRender item={item} />
-                </ScrollView>
+                </ScrollView> */}
+                {Platform.OS === 'android' && (
+                    <>
+                        <ScrollView contentContainerStyle={styles.container}>
+                            <DetailsRender item={item} />
+                        </ScrollView>
+                    </>
+                )}
+                {Platform.OS === 'ios' && (
+                    <>
+                        <ScrollView contentContainerStyle={styles.container_ios}>
+                            <DetailsRender item={item} />
+                        </ScrollView>
+                    </>
+                )}
             </View>
             <View style={{
                 position: "absolute",
@@ -58,5 +72,19 @@ const Details = ({ navigation, route }) => {
         </SafeAreaView >
     )
 }
+const styles = StyleSheet.create({
+    container: {
+        // marginVertical: SIZES.large,
+        justifyContent: 'center',
+        paddingBottom: 400,
+        alignItems: 'center',
+    },
+    container_ios: {
+        paddingBottom: 200,
+        justifyContent: 'center',
+        alignItems: 'center',
+    },
+});
+
 
 export default Details;
