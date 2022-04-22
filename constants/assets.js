@@ -3,6 +3,7 @@ import signupImage from "../assets/images/auth/signup.png";
 import loginImage from "../assets/images/auth/login.png";
 
 import curUser from "../assets/images/curUser.png";
+import creditImage from "../assets/images/credit_card.png";
 
 import popbrnd01 from "../assets/images/popular_brands/burgerking.svg";
 import popbrnd02 from "../assets/images/popular_brands/mcdonalds.svg";
@@ -41,6 +42,9 @@ const starIcon = "star-sharp";
 const restaurantIcon = "restaurant-sharp";
 const cheeseIcon = "cheese";
 const trendingIcon = "trending-up-sharp";
+const gpayIcon = "logo-google";
+const creditIcon = "card-sharp";
+const amazonpayIcon = "logo-amazon";
 
 export default {
     slide01,
@@ -54,11 +58,15 @@ export default {
     starIcon,
     cheeseIcon,
     trendingIcon,
+    gpayIcon,
+    creditIcon,
+    amazonpayIcon,
 
     signupImage,
     loginImage,
 
     curUser,
+    creditImage,
 
     popbrnd01,
     popbrnd02,

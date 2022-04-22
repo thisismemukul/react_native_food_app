@@ -2,7 +2,7 @@ import { Platform, StyleSheet, View, SafeAreaView, Text, ScrollView, FlatList, I
 import React from 'react'
 import { RectButton } from '../components';
 
-import { COLORS, SIZES, FONTS, assets, zomatoData } from '../constants';
+import { COLORS, SIZES, FONTS, assets, profileData } from '../constants';
 import {
     DetailsHeader,
     FocusedStatusBar,
@@ -21,7 +21,7 @@ const Signup = ({ navigation, route }) => {
 
             <View style={{ zIndex: 0 }}>
                 <FlatList
-                    data={zomatoData}
+                    data={profileData}
                     renderItem={({ item }) => <ProfileRender item={item} />}
                     keyExtractor={(item) => item.id + Math.random()}
                     // keyExtractor={(item) => item.id.toString()}

@@ -3,6 +3,7 @@ export const COLORS = {
     secondary: "#F9E4E8",
     background: "#FCFCFC",
     white: "#FFFFFF",
+    offwhite: "#fcfcfc",
     dark: "#172B4D",
     lightDark: "#9BA3B2",
     gray: "#74858C",

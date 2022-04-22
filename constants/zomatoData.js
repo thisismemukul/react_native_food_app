@@ -222,4 +222,10 @@ const trendingSearches = [{
     },
 ];
 
-export { zomatoData, popularBrands, popularDishes, homeRender, trendingSearches, allRestaurants };
+const profileData = [{
+    id: "01",
+    title: "Mukul Saini",
+    email: "thisismemukul@gmail.com",
+    phone: "8769506494"
+}, ];
+export { zomatoData, popularBrands, popularDishes, homeRender, trendingSearches, allRestaurants, profileData };

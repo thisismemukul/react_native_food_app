@@ -71,8 +71,8 @@ const App = () => {
       <NavigationContainer>
         {/* <Onboarding /> */}
         <Stack.Navigator screenOptions={{ headerShown: false }} initialRouteName="Home">
-          <Stack.Screen name="Signup" component={Signup} />          
-          {/* <Stack.Screen name="TabNavigator" component={TabNavigator} />           */}
+          {/* <Stack.Screen name="Signup" component={Signup} />           */}
+          <Stack.Screen name="TabNavigator" component={TabNavigator} />          
           {/* {loading ? <Stack.Screen name="Loading" component={Loading} /> : viewedOnboarding ? <Stack.Screen name="TabNavigator" component={TabNavigator} /> : <Stack.Screen name="Onboarding" component={Onboarding} />} */}
         </Stack.Navigator>
       </NavigationContainer>
