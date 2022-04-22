@@ -2,9 +2,7 @@
 <p align="center">
 <img src="https://github.com/thisismemukul/react_native_food_app/blob/main/assets/cover.png" alt="React-Native FOOD App" title="React-Native FOOD App show gif" width="500"/>
 </p>
-This project is made in react-native with custume API.
-User can add food to cart , search food and restorants.
-
+This project is made in react-native with custom API. Users can add food to the cart, and search for food and restaurants.
 <h4>* Tech Stack used:</h4>
 <ul>
 <li>React-Native</li>
@@ -17,7 +15,7 @@ User can add food to cart , search food and restorants.
 <img src="https://github.com/thisismemukul/react_native_food_app/blob/main/assets/demo.gif" alt="React-Native FOOD App" title="React-Native FOOD App show gif" width="500"/>
 </p>
 
-- [Installation Guide](#installation-guide) - How to get started with NFT App
+- [Installation Guide](#installation-guide) - How to get started with FOOD App
 
 # <a name='installation-guide'>Installation Guide</a>
 
