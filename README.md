@@ -1,4 +1,4 @@
-# React-Native NFT App
+# React-Native FOOD App
 <p align="center">
 <img src="https://github.com/thisismemukul/react_native_food_app/blob/main/assets/cover.png" alt="React-Native FOOD App" title="React-Native FOOD App show gif" width="500"/>
 </p>
