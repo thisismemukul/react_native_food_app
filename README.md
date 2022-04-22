@@ -10,7 +10,7 @@ User can add food to cart , search food and restorants.
 <li>React-Native</li>
 </ul>
 
-<h3> APP Link 🔗: https://expo.dev/@thisismemukul/react_native_nft?serviceType=classic&distribution=expo-go</h3>
+<h3> APP Link 🔗: https://expo.dev/@thisismemukul/food_app?serviceType=classic&distribution=expo-go</h3>
 <h3> UI Link 🔗: https://www.behance.net/gallery/139779433/Food-App-UI</h3>
 
 <p align="center">
